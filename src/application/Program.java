@@ -23,11 +23,16 @@ public class Program {
 		byte[] bytes = texto.getBytes(); // 2ª forma
 		Files.write(path, bytes); 
 		*/
-		
+		/*
 		List <String> allLines = Files.readAllLines(path);
 		for (String texto: allLines) {
 			System.out.println(texto);
 		}
+		*/
+		
+		byte[] bytes = Files.readAllBytes(path);
+		String texto = new String(bytes);
+		System.out.println(texto);
 	}
 
 }
