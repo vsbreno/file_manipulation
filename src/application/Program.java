@@ -3,6 +3,7 @@ package application;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.List;
 
 public class Program {
 
@@ -10,6 +11,7 @@ public class Program {
 
 		Path path = Path.of("c:\\teste\\texto.txt"); //Onde quer criar ?	
 		
+		/*
 		if (Files.notExists(path)) { // Verificar se o arquivo não existe
 			Files.createFile(path); // Criar
 		}
@@ -20,6 +22,12 @@ public class Program {
 		
 		byte[] bytes = texto.getBytes(); // 2ª forma
 		Files.write(path, bytes); 
+		*/
+		
+		List <String> allLines = Files.readAllLines(path);
+		for (String texto: allLines) {
+			System.out.println(texto);
+		}
 	}
 
 }
