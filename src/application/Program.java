@@ -9,7 +9,7 @@ public class Program {
 
 	public static void main(String[] args) throws IOException {
 
-		Path path = Path.of("c:\\teste\\texto.txt"); //Onde quer criar ?	
+		Path path = Path.of("c:\\teste"); //Onde quer criar ?	
 		
 		/*
 		if (Files.notExists(path)) { // Verificar se o arquivo não existe
@@ -29,10 +29,13 @@ public class Program {
 			System.out.println(texto);
 		}
 		*/
-		
+		/*
 		byte[] bytes = Files.readAllBytes(path);
 		String texto = new String(bytes);
 		System.out.println(texto);
+		*/
+		
+		Files.delete(path);
 	}
 
 }
